@@ -7,18 +7,39 @@ public class Fibonacci {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Внесіть ціле число для виводу ряду Фібоначі");
-        long input = sc.nextLong();
-        int n0 = 0;
+        int input = sc.nextInt();
+        System.out.println("Внесіть ціле число при досяганні якого необхідно виконати завершення ряду");
+        int endLineNumber = sc.nextInt();
+        int n0 = input;   // Старт відліку
         int n1 = 1;
         int tmp;
         for (int i = 2; i < input; i++) {
-            tmp = n0 + n1;
-            n0 = n1;
-            n1 = tmp;
-            System.out.print(tmp + " | ");
+            if (input < endLineNumber) {
+                tmp = n0 + n1;
+                n0 = n1;
+                n1 = tmp;
+                System.out.print(tmp + " | ");
+
+
+            } else if (input > endLineNumber) {
+                System.out.println("Введене число відліку: " + input + " є більшим за кінцеве число заверешення: " + endLineNumber);
+                break;
+            }
         }
     }
 }
-
 //Завдання 9
-//        Знайдіть послідовність Фібоначчі. Одне стартове число користувач вводить, друге вводить користувач до шуканого.
+//        Знайдіть послідовність Фібоначчі.
+//        Одне стартове число користувач вводить,
+//        друге вводить користувач до шуканого.
+
+//        for (int i = 2; i < input; i++) {
+//            if (input < endLineNumber) {
+//                tmp = n0 + n1;
+//                n0 = n1;
+//                n1 = tmp;
+//                System.out.print(tmp + " | ");
+//            } else if (input > endLineNumber) {
+//                System.out.println("Введене число відліку: " + input + " є більшим за кінцеве число заверешення: " + endLineNumber);
+//                break;
+//            }

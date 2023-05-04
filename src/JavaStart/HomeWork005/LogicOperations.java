@@ -26,11 +26,10 @@ public class LogicOperations {
 //        y * 5 == (10 * 5) == 50
 //        Побітова кон'юнкція 6 та 50
 //        6 == 0000 0110
-//       50 == 0010 1000
+//       50 == 0011 0010
 //            ------------
-//       0 ==  0000 0000
+//       2 ==  0000 0010
         System.out.println(z);
-//        ??????????  чому 2
 
 
         y /= ((x + 5) | z);
@@ -51,7 +50,7 @@ public class LogicOperations {
 //        Побітова кон'юнкція 5 та 50
 //        y * 5 (10 * 5)  == 50
 //        5 == 0000 0101
-//       50 == 0010 1000
+//       50 == 0011 0010
 //            ------------
 //       0 ==  0000 0000
         System.out.println(z);
@@ -74,3 +73,5 @@ public class LogicOperations {
 
     }
 }
+
+//https://www.convertworld.com/uk/systema-chyslennya/desyatkova.html

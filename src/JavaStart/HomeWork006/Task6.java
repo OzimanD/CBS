@@ -9,22 +9,21 @@ public class Task6 {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-        if (N > 0){
-            int factorial = 1;
-            int tmp = 0;
-
-            for (int i = 0; i < N; i++) {
-                factorial = factorial + i;
-
-                tmp = tmp + 1/(factorial);
-
-                System.out.println(tmp);
-            }
-
-        }else {
+        if (N <= 0) {
             System.out.println("Error");
         }
 
+        int factorial = 1;
+        double tmp = 1;
+
+        for (int i = 0; i < N; i++) {
+            factorial = factorial + i;
+
+            tmp = tmp + 1.0 / (factorial);
+
+            System.out.println(tmp);
+
+        }
     }
 }
 //Завдання 6

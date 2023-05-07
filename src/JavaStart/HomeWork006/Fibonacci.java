@@ -13,13 +13,12 @@ public class Fibonacci {
         int n0 = input;   // Старт відліку
         int n1 = 1;
         int tmp;
-        for (int i = 2; i < input; i++) {
+        for (int i = n0; i < endLineNumber; i++) {
             if (input < endLineNumber) {
                 tmp = n0 + n1;
                 n0 = n1;
                 n1 = tmp;
                 System.out.print(tmp + " | ");
-
 
             } else if (input > endLineNumber) {
                 System.out.println("Введене число відліку: " + input + " є більшим за кінцеве число заверешення: " + endLineNumber);
@@ -28,18 +27,10 @@ public class Fibonacci {
         }
     }
 }
+
 //Завдання 9
 //        Знайдіть послідовність Фібоначчі.
 //        Одне стартове число користувач вводить,
 //        друге вводить користувач до шуканого.
 
-//        for (int i = 2; i < input; i++) {
-//            if (input < endLineNumber) {
-//                tmp = n0 + n1;
-//                n0 = n1;
-//                n1 = tmp;
-//                System.out.print(tmp + " | ");
-//            } else if (input > endLineNumber) {
-//                System.out.println("Введене число відліку: " + input + " є більшим за кінцеве число заверешення: " + endLineNumber);
-//                break;
-//            }
+

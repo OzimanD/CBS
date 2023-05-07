@@ -22,12 +22,9 @@ public class Task5 {
             }
             System.out.println("Сумма чисел в діапазоні: " + A + " та " + B + " складає: " + tmp);
         } else {
-
             System.err.println("A > B  - порушена структура лінійності");
             System.err.println("Введіть число з якого почнеться відлік до -> N по зростанню");
         }
-
-
     }
 }
 

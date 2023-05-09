@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Conversion {
-    static double conversion(double cash, double currencySales, double currencyBought) {
-        double conversion = (cash * currencySales) / currencyBought;    // Основиний розрахунок між валютами
+    static double conversion(double cashVar, double coverCash_var, double currencySales) {
+        double conversion = (cashVar * currencySales)/coverCash_var;    // Основиний розрахунок між валютами
 
         return conversion;
     }
@@ -23,23 +23,32 @@ public class Conversion {
         myHashMap.put("JPY", 0.2721);
         myHashMap.put("CZK", 1.7265);
         myHashMap.put("DKK", 5.4356);
-        myHashMap.put("ILS", 10.0535);
-        myHashMap.put("GEL", 14.6673);
+        myHashMap.put( "ILS", 10.0535);
+        myHashMap.put( "GEL", 14.6673);
         myHashMap.put("HKD", 4.6594);
 
-        for (Map.Entry<String, Double> entry : myHashMap.entrySet())
+        for(Map.Entry<String, Double> entry: myHashMap.entrySet())
             System.out.println(entry.getKey() + " - " + entry.getValue());
 
         Scanner scannerData = new Scanner(System.in);
         System.out.println("Введіть суму для конвертації: ");
-        double cash = scannerData.nextDouble();
+        double cashVar = scannerData.nextDouble();
         System.out.println("Введіть курс бажаної валюти з якої конвертуєте: ");
         double currencySales = scannerData.nextDouble();
         System.out.println("Введіть курс бажаної валюти на яку конвертуєте: ");
-        double currencyBought = scannerData.nextDouble();
-        System.out.println("Сума " + cash + " при конверртації валюти з " + currencySales + " по курсу НБУ на курс валюти " + currencyBought + " складає " + conversion(cash, currencySales, currencyBought));
+        double coverCash_var = scannerData.nextDouble();
+        System.out.println("Сума " +cashVar+ " при конверртації валюти з " + currencySales + " по курсу НБУ на курс валюти " + coverCash_var + " складає " + conversion(cashVar,coverCash_var,currencySales));
+
+
+
+
+
+
+
+
     }
 }
+
 
 //Завдання 3
 //

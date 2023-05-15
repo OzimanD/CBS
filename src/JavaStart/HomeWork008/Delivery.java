@@ -14,10 +14,11 @@ public class Delivery {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Внесіть кількість клієнтів:");
         int clients = sc.nextInt();
 
-        deliveryMethod(clients);
-
+        int factResult = deliveryMethod(clients);
+        System.out.println("Існує: " + factResult + " імовірностей маршрутів доставки для " + clients + " клієнтів.");
     }
 }
 

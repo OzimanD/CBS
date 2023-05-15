@@ -14,12 +14,14 @@ public class Calculator {
         System.out.println(resA + "\n" + resB + "\n" + resC);
     }
 
-    static void calculateCycle(int input) {
-        for (int i = 1; i < 3; i++) {
+    static void calculateCycle() {
+        for (int i = 0; i < 3; i++) {
+            Scanner sc = new Scanner(System.in);
             final int five = 5;
+            int input = sc.nextInt();
             System.out.println("Введіть " + i + "ше " + "значення");
             double res = (double) input / five;
-            System.out.println(res + " " + i);
+            System.out.println(res);
         }
     }
 
@@ -40,9 +42,8 @@ public class Calculator {
         System.out.println("Виконання методу через цикл");
         System.out.println("введіть 3 цілочислені значення");
 
-        int input = sc.nextInt();
 
-        calculateCycle(input);
+        calculateCycle();
 
 
     }
